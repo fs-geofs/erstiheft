@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% XeTeX version in UTF-8 encoding
+%%%
+%%% uses biblatex 0 with utf-8 bug
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[%
+a5paper,
+pagesize, %stellt papiergröße auf die logische seitengröße um
+10pt,
+parskip=false,
+twoside,
+smallheadings,
+% draft,
+DIV12,
+BCOR=10mm,
+]{scrreprt}
+
+% \recalctypearea
+
+%%%XeTeX-Code
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+%%%
+\setromanfont[Mapping=tex-text]{Linux Libertine O}
+\setsansfont[Mapping=tex-text, 
+%Ligatures=NoCommon
+]{Linux Biolinum O}
+\setmonofont[Mapping=tex-text, Scale=0.9]{Courier New}
+
+%%% obsolete with xetex
+%%%\usepackage[utf8]{inputenc}
+
+
+
+\usepackage[ngerman]{babel}
+\usepackage[german=quotes]{csquotes}
+
+% \usepackage[a4, cross, center]{crop} % schnittmarken, frame zeichnet rand um logische seite
+
+%%% obsolete with xetex
+%%%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+% \usepackage{multicol}
+% \usepackage{pdfpages}
+
+% \usepackage{amssymb} %ext. mathsymbols
+ \usepackage{amsmath} %mathgen
+%
+ \usepackage{gensymb} % \degree \celsius \perthousand
+% \usepackage{textcomp}
+
+\usepackage{units} %using typografic fractions in textmode \unit{23}[kg] \unitfrac[42]{m}{s}
+\usepackage{amstext} %mathrm-substitute for non-mathematical test parts in equation mode
+
+%\usepackage{rotating} %rotate
+%\usepackage{pdflscape} %rotate anything
+
+\usepackage{colortbl} % shading array cells and regular text
+\usepackage{multirow} %spanning over multiple rows
+%\usepackage{supertabular} %longtables with multicol
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[format=plain,font=small,figurewithin=none,tablewithin=none]{caption} %xwithin=none setzt die nummerierung fortlaufend im ggs. zu nach kapitelnummer
+
+\usepackage{eurosym}
+\usepackage{longtable}
+\usepackage{url}
+% \usepackage{timestamp}
+%\usepackage{color}
+\usepackage[nottoc, notbib]{tocbibind} %add appendix, bibliography, tofigures, totables etc. to toc [nottoc,notlof,notlot]
+
+
+\usepackage{textcomp}
+\usepackage[plainheadsepline, nouppercase]{scrpage2} %linie unter kopfzeile auch auf der ersten seite eines kapitel und gemischte schreibweise erzwingen
+
+%-----Fußnoten:--------
+\pagestyle{scrheadings}
+\clearscrheadings
+\clearscrplain
+\rohead{\footnotesize{Ersti-Info}}
+\lehead{\footnotesize{Ersti-Info}}
+\lohead{\footnotesize{Geographie - Landschaftsökologie - Geoinformatik}}
+\rehead{\footnotesize{Geographie - Landschaftsökologie - Geoinformatik}}
+\lefoot{\pagemark}
+\rofoot{\pagemark}
+%\setheadsepline{.4pt} % Linie unter dem Head
+%\setfootsepline{.4pt} % Linie Ganzunten
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+\KOMAoptions{cleardoublepage=empty}
+\setkomafont{captionlabel}{\bfseries\small}
+\setkomafont{caption}{\small}
+%---------------------------------%
+%neuer Befehlt mit dem tocdepth innerhalb des dokumentes geändert werden kann
+\newcommand{\settocdepth}[1]{%
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}}
+%---------------------------------%
+
+
+\begin{document}
+\newcolumntype{C}{>{\small\centering\arraybackslash}X}
+\newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+\newcolumntype{D}{>{\small\arraybackslash}X}
+\newcolumntype{F}{>{\small\arraybackslash}p{5mm}}
+
+\renewcaptionname{ngerman}{\figurename}{Abb.}
+\renewcaptionname{ngerman}{\tablename}{Tab.}
+
+ \setcounter{page}{3}
+
+  \include{vorwort12}
+  \cleardoublepage
+
+\begingroup %group-Trick um Inhaltsverzeichnis und Impressum auf eine Seite zu bekommen 
+\let\newpage\relax
+\let\clearpage\relax
+\tableofcontents
+\newpage \bigskip \bigskip
+\include{Impressum}
+\endgroup
+  
+  \cleardoublepage
+  \include{einführung}
+  \cleardoublepage
+  \include{bachelorstudium}
+  \cleardoublepage
+  \include{geographie}
+  \cleardoublepage
+  \include{loek}
+  \cleardoublepage
+  \include{geoinformatik}
+  \cleardoublepage
+  \include{2fachgeo}
+  \cleardoublepage
+  \include{kiju}
+  \cleardoublepage
+  \include{interessantes}
+
+\end{document}
