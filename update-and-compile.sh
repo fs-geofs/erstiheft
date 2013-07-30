@@ -2,8 +2,6 @@
 
 cd /home/ger/erstiheft
 
-echo 'lol'
-
 local_commit=`git log --pretty=oneline -n 1 | sed "s/ .*//"`
 server_commit=`git ls-remote origin -h refs/heads/master | sed "s/\t.*//"`
 
