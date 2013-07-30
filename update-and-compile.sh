@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/ger/erstiheft
+
 echo 'lol'
 
 local_commit=`git log --pretty=oneline -n 1 | sed "s/ .*//"`
