@@ -11,6 +11,6 @@ server_commit=`git ls-remote origin -h refs/heads/master | sed "s/\t.*//"`
 if [ "$local_commit" != "$server_commit" ]; then
   echo "hashes differ, fetching and compiling"
   git pull origin master -q
-  xelatex -synctex=1 -interaction=nonstopmode erstiheft_gesamt.tex
+  xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex
 fi
 
