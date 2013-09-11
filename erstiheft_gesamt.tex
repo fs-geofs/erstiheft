@@ -80,6 +80,8 @@ BCOR=10mm,
 \usepackage{datetime} %compilation time
 \usepackage{microtype}
 
+\usepackage{lettrine} %Big letter on start
+
 %-----Fußnoten:--------
 \pagestyle{scrheadings}
 \clearscrheadings
@@ -114,10 +116,10 @@ BCOR=10mm,
 \renewcaptionname{ngerman}{\figurename}{Abb.}
 \renewcaptionname{ngerman}{\tablename}{Tab.}
 
- \setcounter{page}{3}
+\setcounter{page}{3}
 
-  \include{vorwort13}
-  \cleardoublepage
+\include{vorwort13}
+\cleardoublepage 
 
 \begingroup %group-Trick um Inhaltsverzeichnis und Impressum auf eine Seite zu bekommen 
 \let\newpage\relax
