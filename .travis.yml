@@ -1,4 +1,5 @@
 before_install:
-  - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-beamer latex-xcolor luatex preview-latex-style tex-common texlive texlive-base texlive-binaries texlive-common texlive-doc-base texlive-extra-utils texlive-font-utils texlive-fonts-recommended texlive-fonts-recommended-doc texlive-generic-recommended texlive-lang-german texlive-latex-base texlive-latex-base-doc texlive-latex-extra texlive-latex-extra-doc texlive-latex-recommended texlive-latex-recommended-doc texlive-luatex texlive-pictures texlive-pictures-doc texlive-pstricks texlive-pstricks-doc texlive-xetex"
+  - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-beamer latex-xcolor luatex preview-latex-style tex-common texlive texlive-base texlive-binaries texlive-common texlive-extra-utils texlive-font-utils texlive-fonts-recommended  texlive-generic-recommended texlive-lang-german texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex texlive-pictures texlive-pstricks texlive-xetex fonts-linuxlibertine"
 script:
   - xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex
+sudo: false
