@@ -1,28 +1,25 @@
 addons:
   apt:
     packages:
-    - latex-beamer 
-    - latex-xcolor 
-    - luatex 
-    - preview-latex-style 
-    - tex-common 
-    - texlive 
-    - texlive-base 
-    - texlive-binaries 
-    - texlive-common 
-    - texlive-doc-base 
-    - texlive-extra-utils 
-    - texlive-font-utils 
-    - texlive-fonts-recommended 
-    - texlive-generic-recommended 
-    - texlive-lang-german 
-    - texlive-latex-base 
-    - texlive-latex-extra 
-    - texlive-latex-recommended 
-    - texlive-luatex 
-    - texlive-pictures 
-    - texlive-pstricks 
-    - texlive-xetex 
+    - latex-beamer
+    - latex-xcolor
+    - texlive
+    - texlive-base
+    - texlive-binaries
+    - texlive-common
+    - texlive-doc-base
+    - texlive-extra-utils
+    - texlive-font-utils
+    - texlive-fonts-recommended
+    - texlive-generic-recommended
+    - texlive-lang-german
+    - texlive-latex-base
+    - texlive-latex-extra
+    - texlive-latex-recommended
+    - texlive-luatex
+    - texlive-pictures
+    - texlive-pstricks
+    - texlive-xetex
     - fonts-linuxlibertine
     - lmodern
 script:
