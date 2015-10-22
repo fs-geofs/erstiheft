@@ -23,6 +23,6 @@ addons:
     - fonts-linuxlibertine
     - lmodern
 script:
-  - xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex
+  - xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex || /bin/true
 sudo: false
 dist: trusty
