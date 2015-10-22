@@ -25,3 +25,4 @@ addons:
 script:
   - xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex
 sudo: false
+dist: trusty
