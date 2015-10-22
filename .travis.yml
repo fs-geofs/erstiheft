@@ -24,6 +24,7 @@ addons:
     - texlive-pstricks 
     - texlive-xetex 
     - fonts-linuxlibertine
+    - ttf-linux-libertine
 script:
   - xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex
 sudo: false
