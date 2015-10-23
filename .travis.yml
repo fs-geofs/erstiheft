@@ -1,0 +1,37 @@
+addons:
+  apt:
+    packages:
+    - latex-beamer
+    - latex-xcolor
+    - texlive
+    - texlive-base
+    - texlive-binaries
+    - texlive-common
+    - texlive-doc-base
+    - texlive-extra-utils
+    - texlive-font-utils
+    - texlive-fonts-recommended
+    - texlive-generic-recommended
+    - texlive-lang-german
+    - texlive-latex-base
+    - texlive-latex-extra
+    - texlive-latex-recommended
+    - texlive-luatex
+    - texlive-pictures
+    - texlive-pstricks
+    - texlive-xetex
+    - fonts-linuxlibertine
+    - lmodern
+script:
+  - xelatex -synctex=1 -interaction=nonstopmode --quiet erstiheft_gesamt.tex || /bin/true
+sudo: false
+dist: trusty
+branches:
+  only:
+    - master
+env:
+  secure: "HJQpMKeCBpcsvmWjebLI4b+C8pJrnMsmzMuIAgl6HW4cS1yYo3pVN7dk+z03bqmuKDzoeLZOQmBP4vAYj1VI4SPXGhHEjsVddsAPPSuDsBnnX71MCt225dTtCeO3gflcnZ/WATw8MbEvr9TroxtB3MT8MxWAsLWtVKS0EqlwyJf26FbavstKWvp91iRYXJUbO92YEH4Lk0eQWW5HMLlsJ/bdkiAImE4CeVifcfUD3mQ0N85ugJ/LoNnbYtJyThA5Q86aIk672393FHn4ZriGA7VhfvZ9UGHFIqKJaPlHjt32yCd7iisghB2QCa9qveKi7TTirYbSCjpsH4z3ORGzBJ46Va70bONB4lt/Q8kD7aj83V7T1O6tSzj2BEqgeF5sgqopbsXmLAXnVHfH+KcvDoEx/eIshbjkSfofHap9DzfzABAyhDs7SVftrxmO0Cg2G6yzvYQWk6glRiwKhT5Uz9Mqi8OFiDgDigtSikMaHhtznLzLti+DXBPjjBFfPTYza+n3xUFZ7Z2dH7d1W892z+VyBuRAMzNOt8KS1XjUKm/ldBSAyi5kq0EnBMMpbpgNX/9jg8Knf2PtC3bN/9QtbYae8V32TvIEg9g00XoFFtq1DDq+3Z01t+VKErfBQSxP21iw3cSOgi/CeyMyQwflIRUlXnMDen6vV766iGngj/0="
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./deploy_to_ghpages.sh
