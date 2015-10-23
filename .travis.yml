@@ -34,4 +34,4 @@ env:
 deploy:
   skip_cleanup: true
   provider: script
-  script: deploy_to_ghpages.sh
+  script: ./deploy_to_ghpages.sh
