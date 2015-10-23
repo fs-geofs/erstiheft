@@ -11,7 +11,7 @@ curl -u "$GITHUB_AUTH" -H "Accept: application/vnd.github.v3+json" -X PUT -d @- 
     "email": "travis@travis-ci.org"
   },
   "branch": "gh-pages",
-  "content": "$(base64 erstiheft.pdf)"
+  "content": "$(base64 erstiheft_gesamt.pdf)"
 }
 CURL_DATA
 
