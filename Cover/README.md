@@ -1,7 +1,7 @@
 # Cover fürs Erstiheft FAQ
 
 - Svg mit Inkscape öffnen
-- Schriftart ist Cabin Condensed. Muss vor dem Öffnen mit Inkscape installiert sein
+- Schriftart ist Cabin Condensed. Muss vor dem Öffnen mit Inkscape installiert sein. [Download](http://www.fonts2u.com/download/cabin-condensed.font)
 - Inkscape kann dann alles auch als PDF speichern
 
 Mind = Blown
