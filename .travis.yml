@@ -6,8 +6,8 @@ addons:
     - texlive
     - texlive-base
     - texlive-binaries
-    - texlive-common
-    - texlive-doc-base
+      #- texlive-common
+      #- texlive-doc-base
     - texlive-extra-utils
     - texlive-font-utils
     - texlive-fonts-recommended
