@@ -2,7 +2,7 @@
 
 - Svg mit Inkscape öffnen
 - Schriftart ist Cabin Condensed. Muss vor dem Öffnen mit Inkscape installiert sein. [Download](http://www.fonts2u.com/download/cabin-condensed.font)
-- Inkscape kann dann alles auch als PDF speichern
+- Inkscape kann dann alles auch als PDF speichern. Dabei drauf achten, Texte zu Pfaden zu konvertieren
 
 Mind = Blown
 
